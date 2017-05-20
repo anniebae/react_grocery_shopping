@@ -15,8 +15,7 @@ class Fruits extends Component {
   }
   render() {
     return(
-      <div>
-        Fruits go here
+      <div className="fruitsWrapper">
 
         <div className="itemGroup">
           {Object.keys(JSON).map(key => (
@@ -24,8 +23,11 @@ class Fruits extends Component {
               <div className="itemInfo">
                 <img src={JSON[key].imgSrc} className="itemImg" key={key} />
                 <p className="itemName">{JSON[key].itemName}</p>
-                <p className="itemPrice">${JSON[key].price}</p>
-                <p className="itemRemaining">{JSON[key].quantityRemaining} remaining</p>
+                <p className="itemPrice">
+                  ${JSON[key].price}
+                  <span className="itemRemaining">{JSON[key].quantityRemaining} In Stock</span>
+                  
+                </p>
                 <button onClick={this.addItemBtn}>Add to Cart</button>
               </div>
             </div>

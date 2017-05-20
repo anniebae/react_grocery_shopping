@@ -1,21 +1,38 @@
 @mainGreen: #65c69a;
 
-.itemGroup {
-  display: flex;
+.fruitsWrapper {
+  float: left;
+  width: 80%;
 
-  .itemBlock {
-    border: 1px solid @mainGreen;
-    text-align: center;
-    width: 220px;
-    height: 297px;
+  .itemGroup {
 
-    .itemInfo {
+    .itemBlock {
+      border: 1px solid @mainGreen;
+      text-align: center;
+      width: 220px;
+      height: 297px;
+      display: inline-block;
+      margin: 20px;
 
-      .itemImg {
-        width: 150px;
-        // object-fit: cover;
+      .itemInfo {
+
+        .itemImg {
+          width: 150px;
+        }
+        .itemName {
+          margin: 0;
+        }
+        .itemPrice {
+          margin: 0;
+          font-size: 22px;
+
+          span.itemRemaining {
+            font-size: 14px;
+            margin: 0 10px;
+          }
+        }
       }
+      
     }
-    
   }
 }

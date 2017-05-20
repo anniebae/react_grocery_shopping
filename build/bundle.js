@@ -9570,8 +9570,7 @@ var Fruits = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
-        'Fruits go here',
+        { className: 'fruitsWrapper' },
         _react2.default.createElement(
           'div',
           { className: 'itemGroup' },
@@ -9592,13 +9591,13 @@ var Fruits = function (_Component) {
                   'p',
                   { className: 'itemPrice' },
                   '$',
-                  _store_items2.default[key].price
-                ),
-                _react2.default.createElement(
-                  'p',
-                  { className: 'itemRemaining' },
-                  _store_items2.default[key].quantityRemaining,
-                  ' remaining'
+                  _store_items2.default[key].price,
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'itemRemaining' },
+                    _store_items2.default[key].quantityRemaining,
+                    ' In Stock'
+                  )
                 ),
                 _react2.default.createElement(
                   'button',
@@ -9635,6 +9634,10 @@ var _react = __webpack_require__(32);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _index = __webpack_require__(194);
+
+var _index2 = _interopRequireDefault(_index);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9657,7 +9660,7 @@ var ShoppingCart = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'shoppingCartWrapper' },
         'Shopping cart czech aut.'
       );
     }
@@ -9741,9 +9744,17 @@ var App = function (_Component) {
         'div',
         null,
         _react2.default.createElement(
-          'h1',
-          null,
-          'Fruits!'
+          'div',
+          { className: 'appTitle' },
+          _react2.default.createElement(
+            'div',
+            { className: 'titleWrapper' },
+            _react2.default.createElement(
+              'h1',
+              null,
+              'Fruit'
+            )
+          )
         ),
         _react2.default.createElement(_Fruits2.default, null),
         _react2.default.createElement(_ShoppingCart2.default, null)
@@ -9767,7 +9778,7 @@ exports = module.exports = __webpack_require__(87)(undefined);
 
 
 // module
-exports.push([module.i, ".itemGroup{display:flex}.itemGroup .itemBlock{border:1px solid #65c69a;text-align:center;width:220px;height:297px}.itemGroup .itemBlock .itemInfo .itemImg{width:150px}", ""]);
+exports.push([module.i, ".fruitsWrapper{float:left;width:80%}.fruitsWrapper .itemGroup .itemBlock{border:1px solid #65c69a;text-align:center;width:220px;height:297px;display:inline-block;margin:20px}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemImg{width:150px}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemName{margin:0}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemPrice{margin:0;font-size:22px}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemPrice span.itemRemaining{font-size:14px;margin:0 10px}", ""]);
 
 // exports
 
@@ -22863,10 +22874,55 @@ exports = module.exports = __webpack_require__(87)(undefined);
 
 
 // module
-exports.push([module.i, "body{font-family:Helvetica,Arial,sans-serif}", ""]);
+exports.push([module.i, "body{font-family:Helvetica,Arial,sans-serif}body .appTitle{border-bottom:5px solid #65c69a}body .appTitle .titleWrapper{width:183px;text-align:center;background:#65c69a;color:#fff;margin-left:50px}body .appTitle .titleWrapper h1{margin-bottom:0}", ""]);
 
 // exports
 
+
+/***/ }),
+/* 193 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(87)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".shoppingCartWrapper{background:#65c69a;width:20%;float:right}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(193);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(187)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);
