@@ -9571,22 +9571,26 @@ var Fruits = function (_Component) {
               'div',
               { className: 'itemBlock' },
               _react2.default.createElement(
-                'p',
-                { className: 'itemName' },
-                _store_items2.default[key].itemName
-              ),
-              _react2.default.createElement('img', { src: _store_items2.default[key].imgSrc, className: 'itemImg', key: key }),
-              _react2.default.createElement(
-                'p',
-                { className: 'itemPrice' },
-                '$',
-                _store_items2.default[key].price
-              ),
-              _react2.default.createElement(
-                'p',
-                { className: 'itemRemaining' },
-                _store_items2.default[key].quantityRemaining,
-                ' remaining'
+                'div',
+                { className: 'itemInfo' },
+                _react2.default.createElement(
+                  'p',
+                  { className: 'itemName' },
+                  _store_items2.default[key].itemName
+                ),
+                _react2.default.createElement('img', { src: _store_items2.default[key].imgSrc, className: 'itemImg', key: key }),
+                _react2.default.createElement(
+                  'p',
+                  { className: 'itemPrice' },
+                  '$',
+                  _store_items2.default[key].price
+                ),
+                _react2.default.createElement(
+                  'p',
+                  { className: 'itemRemaining' },
+                  _store_items2.default[key].quantityRemaining,
+                  ' remaining'
+                )
               )
             );
           })
@@ -9745,7 +9749,7 @@ exports = module.exports = __webpack_require__(87)(undefined);
 
 
 // module
-exports.push([module.i, ".itemGroup{display:flex}.itemGroup .itemBlock{border:1px solid #65c69a}.itemGroup .itemBlock .itemImg{width:150px}", ""]);
+exports.push([module.i, ".itemGroup{display:flex}.itemGroup .itemBlock{border:1px solid #65c69a;text-align:center;width:220px;height:297px}.itemGroup .itemBlock .itemInfo .itemImg{width:150px}", ""]);
 
 // exports
 

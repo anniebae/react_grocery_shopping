@@ -16,10 +16,12 @@ class Fruits extends Component {
         <div className="itemGroup">
           {Object.keys(JSON).map(key => (
             <div className="itemBlock">
-              <p className="itemName">{JSON[key].itemName}</p>
-              <img src={JSON[key].imgSrc} className="itemImg" key={key} />
-              <p className="itemPrice">${JSON[key].price}</p>
-              <p className="itemRemaining">{JSON[key].quantityRemaining} remaining</p>
+              <div className="itemInfo">
+                <p className="itemName">{JSON[key].itemName}</p>
+                <img src={JSON[key].imgSrc} className="itemImg" key={key} />
+                <p className="itemPrice">${JSON[key].price}</p>
+                <p className="itemRemaining">{JSON[key].quantityRemaining} remaining</p>
+              </div>
             </div>
           ))}
         </div>
