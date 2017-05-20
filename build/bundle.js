@@ -9661,7 +9661,11 @@ var ShoppingCart = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'shoppingCartWrapper' },
-        'Shopping cart czech aut.'
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Shopping Cart'
+        )
       );
     }
   }]);
@@ -22888,7 +22892,7 @@ exports = module.exports = __webpack_require__(87)(undefined);
 
 
 // module
-exports.push([module.i, ".shoppingCartWrapper{background:#65c69a;width:20%;float:right}", ""]);
+exports.push([module.i, ".shoppingCartWrapper{background:#65c69a;width:20%;float:right}.shoppingCartWrapper h1{color:#fff}", ""]);
 
 // exports
 

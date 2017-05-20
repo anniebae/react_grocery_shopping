@@ -5,7 +5,9 @@ import css from './index.css'
 class ShoppingCart extends Component {
   render() {
     return (
-      <div className="shoppingCartWrapper">Shopping cart czech aut.</div>
+      <div className="shoppingCartWrapper">
+        <h1>Shopping Cart</h1>
+      </div>
     )
   }
 }
