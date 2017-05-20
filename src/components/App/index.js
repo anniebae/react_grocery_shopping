@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
+import css from './index.css'
+
 import Fruits from '../Fruits'
 import ShoppingCart from '../ShoppingCart'
 

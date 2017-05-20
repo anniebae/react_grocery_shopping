@@ -9549,15 +9549,24 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Fruits = function (_Component) {
   _inherits(Fruits, _Component);
 
-  function Fruits() {
+  function Fruits(props) {
     _classCallCheck(this, Fruits);
 
-    return _possibleConstructorReturn(this, (Fruits.__proto__ || Object.getPrototypeOf(Fruits)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Fruits.__proto__ || Object.getPrototypeOf(Fruits)).call(this, props));
+
+    _this.addItemBtn = _this.addItemBtn.bind(_this);
+    return _this;
   }
 
   _createClass(Fruits, [{
+    key: 'addItemBtn',
+    value: function addItemBtn() {
+      alert('btn clicked');
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
 
       return _react2.default.createElement(
         'div',
@@ -9573,12 +9582,12 @@ var Fruits = function (_Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'itemInfo' },
+                _react2.default.createElement('img', { src: _store_items2.default[key].imgSrc, className: 'itemImg', key: key }),
                 _react2.default.createElement(
                   'p',
                   { className: 'itemName' },
                   _store_items2.default[key].itemName
                 ),
-                _react2.default.createElement('img', { src: _store_items2.default[key].imgSrc, className: 'itemImg', key: key }),
                 _react2.default.createElement(
                   'p',
                   { className: 'itemPrice' },
@@ -9590,6 +9599,11 @@ var Fruits = function (_Component) {
                   { className: 'itemRemaining' },
                   _store_items2.default[key].quantityRemaining,
                   ' remaining'
+                ),
+                _react2.default.createElement(
+                  'button',
+                  { onClick: _this2.addItemBtn },
+                  'Add to Cart'
                 )
               )
             );
@@ -9686,6 +9700,10 @@ var _react2 = _interopRequireDefault(_react);
 var _reactDom = __webpack_require__(84);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _index = __webpack_require__(191);
+
+var _index2 = _interopRequireDefault(_index);
 
 var _Fruits = __webpack_require__(81);
 
@@ -22804,6 +22822,51 @@ module.exports = [
 		"quantityRemaining": 3
 	}
 ];
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(192);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(187)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 192 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(87)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "body{font-family:Helvetica,Arial,sans-serif}", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);
