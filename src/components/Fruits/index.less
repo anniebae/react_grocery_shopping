@@ -13,24 +13,44 @@
       height: 297px;
       display: inline-block;
       margin: 20px;
+      position: relative;
 
       .itemInfo {
+        position: absolute;
+        width: 100%;
+        height: 100%;
 
-        .itemImg {
-          width: 150px;
-        }
-        .itemName {
-          margin: 0;
-        }
-        .itemPrice {
-          margin: 0;
-          font-size: 22px;
+        .itemMore {
+          padding: 20px;
+          height: 100%;
+          
+          .itemImg {
+            width: 150px;
+          }
+          .itemName {
+            margin: 0;
+          }
+          .itemPrice {
+            margin: 0;
+            font-size: 22px;
 
-          span.itemRemaining {
+            span.itemRemaining {
+              font-size: 14px;
+              margin: 0 10px;
+            }
+          }
+          button.addtoCart {
+            border: none;
+            background: @mainGreen;
+            color: @black;
+            border-radius: 5px;
+            cursor: pointer;
             font-size: 14px;
-            margin: 0 10px;
+            padding: 10px 0;
+            width: 100%;
           }
         }
+
       }
       
     }

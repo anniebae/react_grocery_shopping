@@ -9581,28 +9581,32 @@ var Fruits = function (_Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'itemInfo' },
-                _react2.default.createElement('img', { src: _store_items2.default[key].imgSrc, className: 'itemImg', key: key }),
                 _react2.default.createElement(
-                  'p',
-                  { className: 'itemName' },
-                  _store_items2.default[key].itemName
-                ),
-                _react2.default.createElement(
-                  'p',
-                  { className: 'itemPrice' },
-                  '$',
-                  _store_items2.default[key].price,
+                  'div',
+                  { className: 'itemMore' },
+                  _react2.default.createElement('img', { src: _store_items2.default[key].imgSrc, className: 'itemImg', key: key }),
                   _react2.default.createElement(
-                    'span',
-                    { className: 'itemRemaining' },
-                    _store_items2.default[key].quantityRemaining,
-                    ' In Stock'
+                    'p',
+                    { className: 'itemName' },
+                    _store_items2.default[key].itemName
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    { className: 'itemPrice' },
+                    '$',
+                    _store_items2.default[key].price,
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'itemRemaining' },
+                      _store_items2.default[key].quantityRemaining,
+                      ' In Stock'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'button',
+                    { className: 'addtoCart', onClick: _this2.addItemBtn },
+                    'Add to Cart'
                   )
-                ),
-                _react2.default.createElement(
-                  'button',
-                  { onClick: _this2.addItemBtn },
-                  'Add to Cart'
                 )
               )
             );
@@ -9782,7 +9786,7 @@ exports = module.exports = __webpack_require__(87)(undefined);
 
 
 // module
-exports.push([module.i, ".fruitsWrapper{float:left;width:80%}.fruitsWrapper .itemGroup .itemBlock{border:1px solid #65c69a;text-align:center;width:220px;height:297px;display:inline-block;margin:20px}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemImg{width:150px}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemName{margin:0}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemPrice{margin:0;font-size:22px}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemPrice span.itemRemaining{font-size:14px;margin:0 10px}", ""]);
+exports.push([module.i, ".fruitsWrapper{float:left;width:80%}.fruitsWrapper .itemGroup .itemBlock{border:1px solid #65c69a;text-align:center;width:220px;height:297px;display:inline-block;margin:20px;position:relative}.fruitsWrapper .itemGroup .itemBlock .itemInfo{position:absolute;width:100%;height:100%}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemMore{padding:20px;height:100%}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemMore .itemImg{width:150px}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemMore .itemName{margin:0}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemMore .itemPrice{margin:0;font-size:22px}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemMore .itemPrice span.itemRemaining{font-size:14px;margin:0 10px}.fruitsWrapper .itemGroup .itemBlock .itemInfo .itemMore button.addtoCart{border:none;background:#65c69a;color:#000;border-radius:5px;cursor:pointer;font-size:14px;padding:10px 0;width:100%}", ""]);
 
 // exports
 
@@ -22892,7 +22896,7 @@ exports = module.exports = __webpack_require__(87)(undefined);
 
 
 // module
-exports.push([module.i, ".shoppingCartWrapper{background:#65c69a;width:20%;float:right}.shoppingCartWrapper h1{color:#fff}", ""]);
+exports.push([module.i, ".shoppingCartWrapper{background:#65c69a;width:20%;float:right;text-align:center}.shoppingCartWrapper h1{color:#fff;font-size:22px}", ""]);
 
 // exports
 

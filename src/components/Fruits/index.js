@@ -21,14 +21,16 @@ class Fruits extends Component {
           {Object.keys(JSON).map(key => (
             <div className="itemBlock">
               <div className="itemInfo">
-                <img src={JSON[key].imgSrc} className="itemImg" key={key} />
-                <p className="itemName">{JSON[key].itemName}</p>
-                <p className="itemPrice">
-                  ${JSON[key].price}
-                  <span className="itemRemaining">{JSON[key].quantityRemaining} In Stock</span>
-                  
-                </p>
-                <button onClick={this.addItemBtn}>Add to Cart</button>
+                <div className="itemMore">
+                  <img src={JSON[key].imgSrc} className="itemImg" key={key} />
+                  <p className="itemName">{JSON[key].itemName}</p>
+                  <p className="itemPrice">
+                    ${JSON[key].price}
+                    <span className="itemRemaining">{JSON[key].quantityRemaining} In Stock</span>
+                    
+                  </p>
+                  <button className="addtoCart" onClick={this.addItemBtn}>Add to Cart</button>
+                </div>
               </div>
             </div>
           ))}
